@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+    <!-- Scrolling Animation : https://www.youtube.com/watch?v=1wfeqDyMUx4 -->
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Neomu Neomu</a>
+            <ul>
+                <li><a href="home" class="active">Home</a></li>
+                <li><a href="gallery" class="gallery">Gallery</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        
+        <section>
+            <img src="styles/photos/stars.png" id="stars">
+            <img src="styles/photos/moon.png" id="moon">
+            <h2 id="text"></h2>
+            <a href="#sec" id="btn">About the Artist</a>
+        </section>
+        <div class="sec" id="sec">
+            <h2>Fraey</h2>
+            <img src="styles/photos/fraey.png" id="fraey">
+            <p>
+                An artist based in NYC.
+                <br><br>
+                The gallery are the works done by the Artist. They include pieces that she worked on
+                in her free time either for other people or as a personal project. The artist is not currently
+                doing any commissions. However, she is selling digital emojis that can be used for Twitch,
+                with the proper credits, for Discord emojis, and so on.
+
+                Thank you for checking out Neomu Neomu!
+            </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let header = document.querySelector('header');
+
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
